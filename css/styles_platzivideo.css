@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* ------------------------------------------------------------------ */
+/* GENERAL */
+/* ------------------------------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+/* ------------------------------------------------------------------ */
+/* CONTAINER */
+/* ------------------------------------------------------------------ */
+.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+/* ------------------------------------------------------------------ */
+/* CONTAINER (HIDDEN)*/
+/* ------------------------------------------------------------------ */
+.container.hidden {
+    grid-template-columns: auto 1fr;
+}
+.container.hidden .nav-menu h1,
+.container.hidden .nav-menu .my-playlist,
+.container.hidden .nav-menu .friends-playlist{
+    display: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* NAV-MENU */
+/* ------------------------------------------------------------------ */
+.nav-menu {
+    background: #151B31;
+    color: white;
+    font-weight: 300;
+    padding: 1em;
+    display: grid;
+    align-content: start;
+    align-items: start;
+    gap: 2em;
+}
+.nav-menu h1 span {
+    color: #FF4280;
+}
+.nav-menu h3 {
+    margin-bottom: 1em;
+}
+.nav-menu .nav-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-title i {
+    display: block;
+    font-size: 2em;
+}
+.nav-menu .my-playlist-videos-container,
+.nav-menu .friends-container {
+    display: grid;
+    align-content: start;
+    align-items: start;
+    gap: .5em;
+}
+.nav-menu .my-playlist-video,
+.nav-menu .friend {
+    display: grid;
+    gap: .5em;
+}
+.nav-menu .my-playlist-video {
+    grid-template-columns: 20px 1fr;
+}
+
+.nav-menu .friend {
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+}
+.nav-menu .avatar {
+    background: white;
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* ------------------------------------------------------------------ */
+/* VIDEO-MENU */
+/* ------------------------------------------------------------------ */
+.video-menu {
+    display: grid;
+    gap: .5em;
+    background: #eee;
+}
+.video-menu > div {
+    background: white;
+}
+/* ------------------------------------------------------------------ */
+/* PLAYER-CONTAINER */
+/* ------------------------------------------------------------------ */
+.player-container .player-video {
+    background-color: #34352F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-container .player-options {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .8em;
+}
+.player-options span {
+    font-size: .8em;
+}
+.player-options .player-info {
+    grid-column: span 2;
+}
+.player-options .player-info h3 {
+    margin-bottom: .2em;
+}
+.player-info .player-views {
+    color: gray;
+}
+.player-options .player-buttons-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    justify-items: center;
+    gap: .8em;
+}
+.player-buttons-container a {
+    display: block;
+    text-decoration: none;
+    color: #909090;
+}
+.player-buttons-container a:nth-child(2),
+.player-buttons-container a:nth-child(3) {
+    width: 100px;
+}
+.player-buttons-container i {
+    font-size: 1.5em;
+}
+.player-buttons-container .player-add-btn {
+    background-color: #FF4280;
+    padding: .5em;
+    border-radius: 10px;
+    color: white;
+}
+.player-buttons-container .player-share-btn,
+.player-buttons-container .player-save-btn {
+    display: grid;
+    justify-items: center;
+}
+.player-tags-container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: .8em;
+}
+.player-tags-container .player-tag {
+    display: block;
+    border-radius: 20px;
+    padding: .5em 1em;
+    text-align: center;
+    color: white;
+}
+.player-tag:nth-child(1) {
+    background: #9B57FC;
+}
+.player-tag:nth-child(2) {
+    background: #16EBBF;
+}
+.player-tag:nth-child(3) {
+    background: #E01721;
+}
+.player-tag:nth-child(4) {
+    background: #ED3083;
+}
+/* ------------------------------------------------------------------ */
+/* EXTRA */
+/* ------------------------------------------------------------------ */
+.extra {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1em;
+}
+.extra h4 {
+    margin-bottom: .5em;
+}
+.extra .avatar {
+    background: white;
+    width: 100%;
+    border-radius: 50%;
+}
+.extra .comment-box {
+    background: #F2F2F2;
+    margin-bottom: .5em;
+    border-radius: 20px;
+    padding: .5em;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: .5em;
+}
+.comment-box input {
+    height: 75%;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    padding-left: .2em;
+    font-size: 1.2em;
+}
+.extra .comments-list {
+    display: grid;
+    gap: .5em;
+}
+.comment {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    gap: .5em;
+}
+.comment .avatar {
+    grid-row: span 2;
+}
+.comment .comment-username {
+    font-weight: bold;
+}
+.ads-container .ads-list {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1em;
+}
+.ad .ad-img {
+    width: 100%;
+}
+.ad .ad-description {
+    font-size: .8em;
+}
+/* ------------------------------------------------------------------ */
+/* MEDIA QUERIES */
+/* ------------------------------------------------------------------ */
+@media screen and (max-width: 1024px) {
+    body {
+        font-size: 12px;
+    }
+    .extra {
+        grid-template-columns: 1fr;
+    }
+    .ads-container .ads-list {
+        grid-auto-flow: column;
+    }
+}
